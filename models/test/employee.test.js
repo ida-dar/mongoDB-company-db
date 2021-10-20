@@ -1,5 +1,4 @@
 const { expect } = require('chai');
-const mongoose = require('mongoose');
 const Employee = require('../employee.model.js');
 
 describe('Employee', () => {
@@ -66,7 +65,7 @@ describe('Employee', () => {
     }
   });
 
-  it('should NOT throw an error if all args are corect', () => {
+  it('should NOT throw an error if all args are correct', () => {
     const cases = ['Lorem', 'Lorem ipsum'];
     for(let arg of cases) {
       const emp = new Employee({ arg, arg, arg });
@@ -79,8 +78,4 @@ describe('Employee', () => {
     }
   });
 
-});
-
-after(() => {
-  mongoose.models = {};
 });
